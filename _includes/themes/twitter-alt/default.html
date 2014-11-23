@@ -25,7 +25,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -40,14 +39,32 @@
     </nav>
 
 	<div class="sidebar-wrapper">
-	  <ul class="sidebar-nav">
-	    <li><a href="{{ HOME_PATH }}">Home</a></li>
-		<li><a href="{{ HOME_PATH }}/about/">About me</a></li>
-		{% if site.author.resume %}<li><a href="{{ HOME_PATH }}/{{ site.author.resume }}">Resume</a></li>{% endif %}
+	  <ul class="sidebar-nav list-unstyled">
+	    <li>
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			<a href="{{ HOME_PATH }}">Home</a>
+		</li>
+		<li>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<a href="{{ HOME_PATH }}/about/">About me</a>
+		</li>
+		{% if site.author.resume %}<li>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<a href="{{ HOME_PATH }}/{{ site.author.resume }}">Resume</a>
+		</li>{% endif %}
 
-		<li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-		<li><a href="https://github.com/{{ site.author.github }}">@{{ site.author.github }}</a></li>
-		<li><a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a></li>
+		<li>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+		</li>
+		<li>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<a href="https://github.com/{{ site.author.github }}">@{{ site.author.github }}</a>
+		</li>
+		<li>
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
+		</li>
 	  </ul>
 	</div>
 
