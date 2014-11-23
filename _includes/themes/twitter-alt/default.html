@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col-md-11 col-md-offset-1">
             <div class="navbar-header">
-              <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+              <a class="navbar-brand" href="{{ BASE_PATH }}">{{ site.title }}</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 {% assign pages_list = site.pages %}
@@ -47,15 +47,15 @@
         <ul class="sidebar-nav list-unstyled">
           <li>
           <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          <a href="{{ HOME_PATH }}">Home</a>
+          <a href="{{ BASE_PATH }}">Home</a>
         </li>
         <li>
           <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="{{ HOME_PATH }}/about/">About me</a>
+          <a href="{{ BASE_PATH }}/about/">About me</a>
         </li>
         {% if site.author.resume %}<li>
           <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="{{ HOME_PATH }}/{{ site.author.resume }}">Resume</a>
+          <a href="{{ BASE_PATH }}/{{ site.author.resume }}">Resume</a>
         </li>{% endif %}
 
         <li>
