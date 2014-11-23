@@ -28,59 +28,62 @@
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
         </div>
-		<ul class="nav navbar-nav navbar-right">
+		    <ul class="nav navbar-nav navbar-right">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
         </ul>
       </div>
     </nav>
+	
+    <div class="row">
+      <div class="sidebar-wrapper col-md-3">
+        <ul class="sidebar-nav list-unstyled">
+          <li>
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <a href="{{ HOME_PATH }}">Home</a>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <a href="{{ HOME_PATH }}/about/">About me</a>
+        </li>
+        {% if site.author.resume %}<li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <a href="{{ HOME_PATH }}/{{ site.author.resume }}">Resume</a>
+        </li>{% endif %}
 
-	<div class="sidebar-wrapper">
-	  <ul class="sidebar-nav list-unstyled">
-	    <li>
-			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-			<a href="{{ HOME_PATH }}">Home</a>
-		</li>
-		<li>
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			<a href="{{ HOME_PATH }}/about/">About me</a>
-		</li>
-		{% if site.author.resume %}<li>
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			<a href="{{ HOME_PATH }}/{{ site.author.resume }}">Resume</a>
-		</li>{% endif %}
-
-		<li>
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			<a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-		</li>
-		<li>
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			<a href="https://github.com/{{ site.author.github }}">@{{ site.author.github }}</a>
-		</li>
-		<li>
-			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-			<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
-		</li>
-	  </ul>
-	</div>
-
-    <div class="container">
-      <div class="content">
-        {{ content }}
+        <li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <a href="https://github.com/{{ site.author.github }}">@{{ site.author.github }}</a>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
+        </li>
+        </ul>
       </div>
 
-      <footer>
-        <p>&copy; {{ site.author.name }} 2014.<br />
-          Powered by<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </footer>
-    </div> <!-- /container -->
+      <div class="container col-md-9">
+        <div class="content">
+          {{ content }}
+        </div>
 
+        <footer>
+          <p>&copy; {{ site.author.name }} 2014.<br />
+            Powered by<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+            and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          </p>
+        </footer>
+      </div> <!-- /container -->
+    </div>
+  
     {% include JB/analytics %}
   </body>
 </html>
+
