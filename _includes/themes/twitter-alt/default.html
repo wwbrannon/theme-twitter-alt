@@ -39,31 +39,36 @@
       <div id="sidebar-wrapper">
         <ul class="list-unstyled">
           <li>
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          <span class="fa fa-home" aria-hidden="true"></span>
           <a href="{{ BASE_PATH }}/">Home</a>
-        </li>
+          </li>
         
-        {% if site.author.about %}<li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="{{ BASE_PATH }}/about/">About me</a>
-        </li>{% endif %}
-        {% if site.author.resume %}<li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="{{ BASE_PATH }}/{{ site.author.resume }}">Resume</a>
-        </li>{% endif %}
+          {% if site.author.about %}
+          <li>
+            <span class="fa fa-user" aria-hidden="true"></span>
+            <a href="{{ BASE_PATH }}/about/">About me</a>
+          </li>
+          {% endif %}
+          
+          {% if site.author.resume %}
+          <li>
+            <span class="fa fa-file-text-o" aria-hidden="true"></span>
+            <a href="{{ BASE_PATH }}/{{ site.author.resume }}">Resume</a>
+          </li>
+          {% endif %}
 
-        <li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-        </li>
-        <li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="https://github.com/{{ site.author.github }}">github.com/{{ site.author.github }}</a>
-        </li>
-        <li>
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-          <a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
-        </li>
+          <li>
+            <span class="fa fa-envelope" aria-hidden="true"></span>
+            <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          </li>
+          <li>
+            <span class="fa fa-github-alt" aria-hidden="true"></span>
+            <a href="https://github.com/{{ site.author.github }}">github.com/{{ site.author.github }}</a>
+          </li>
+          <li>
+            <span class="fa fa-twitter" aria-hidden="true"></span>
+            <a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
+          </li>
         </ul>
       </div>
 

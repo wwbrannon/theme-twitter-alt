@@ -31,8 +31,9 @@ html, body {
   padding-left: 10px;
 }
 
-#sidebar-wrapper ul li {
-  
+#sidebar-wrapper {
+  background-color: #eee;
+  text-indent: 20px;
 }
 
 /* tag_box ======================================================== */
