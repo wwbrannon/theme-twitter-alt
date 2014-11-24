@@ -31,6 +31,10 @@ html, body {
   padding-left: 10px;
 }
 
+#sidebar-wrapper ul li {
+  
+}
+
 /* tag_box ======================================================== */
 .tag_box {
 	list-style:none;
