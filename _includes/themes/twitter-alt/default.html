@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} | {{ site.title }} - {{ site.description }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+    <meta charset="utf-8" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% if site.description %} - {{ site.description }}{% endif %}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    <meta name="author" content="{{ site.author.name }}" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -12,26 +12,23 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="{{ ASSET_PATH }}/css/sidebar.css" rel="stylesheet" type="text/css" media="all">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel='stylesheet' type='text/css' />
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ ASSET_PATH }}/css/sidebar.css" rel="stylesheet" type="text/css" media="all" />
     
-    <link href='//fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-
     <!-- jQuery -->
-    <script async src="{{ ASSET_PATH }}/js/jquery.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script async src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
 
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+    <!-- Le icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+
+	<!-- RSS links for autodiscovery -->
+	<link rel="alternate" type="application/rss+xml" title="Will Brannon" href="{{ BASE_PATH}}/rss.xml" />
+	<link rel="alternate" type="application/rss+xml" title="Will Brannon" href="{{ BASE_PATH}}/atom.xml" />
   </head>
 
   <body>
