@@ -1,14 +1,7 @@
-/* Override some defaults */
+/* global ========================================================= */
 html, body {
+  /* Override some defaults */
   background-color: #eee;
-}
-
-.container > footer p {
-  text-align: center; /* center align it with the container */
-}
-
-.container {
-  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
 /* The white background content wrapper */
@@ -31,8 +24,14 @@ html, body {
   margin: -20px -20px 20px;
 }
 
-/* tag_box ======================================================== */
+.navbar {
+  margin-right: -20px;
+  margin-left: -20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
+/* tag_box ======================================================== */
 .tag_box {
 	list-style:none;
 	margin:0;
